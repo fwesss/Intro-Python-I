@@ -1,3 +1,6 @@
+import sys
+
+
 def check_prime(number):
     prime = True
     p = 2
@@ -27,4 +30,4 @@ def check_prime(number):
 
 
 if __name__ == '__main__':
-    print(check_prime(2))
+    print(check_prime(int(sys.argv[1])))
