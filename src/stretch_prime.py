@@ -29,5 +29,5 @@ def check_prime(number):
     return prime
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(check_prime(int(sys.argv[1])))
