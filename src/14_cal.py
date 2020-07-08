@@ -19,6 +19,17 @@ and does the following:
    Then exit the program.
 """
 
-import sys
 import calendar
+import sys
 from datetime import datetime
+
+
+def create_calendar(month=datetime.now().month, year=datetime.now().year):
+    return calendar.TextCalendar(calendar.SUNDAY).formatmonth(int(year), int(month))
+
+
+if __name__ == '__main__':
+    if len(sys.argv) <= 3:
+        print(create_calendar(*sys.argv[1:]))
+    else:
+        print("Please enter the: month year")
