@@ -24,11 +24,13 @@ import sys
 from datetime import datetime
 
 
-def create_calendar(month=datetime.now().month, year=datetime.now().year):
+def create_calendar(
+    month: str = datetime.now().month, year: str = datetime.now().year
+) -> str:
     return calendar.TextCalendar(calendar.SUNDAY).formatmonth(int(year), int(month))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if len(sys.argv) <= 3:
         print(create_calendar(*sys.argv[1:]))
     else:
